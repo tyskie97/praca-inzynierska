@@ -1,0 +1,5 @@
+1.wszystkie skrypty traktujemy na koniec z "chmod a+x ./*.sh" 
+	wartosc "x" daje mozliwosc executable
+	wartosc "a" pozwala korzystac przez kazdego uzytkownika i nie trzeba dawac zaraz sudo
+
+2. 

@@ -1,0 +1,43 @@
+Plan na zrobienie pracy inzynierskiej
+
+
+1.decyzja o przygotowaniu jednego duzego pliku lub rozdzielenie na kilka mniejszych pozwalajacych na rozdzielenie czessi jak : przygotowanie systemu, przygotowanie bazy danych, przygotowanie aplikacji 
+
+2. kompletny opis systemow jak i powodu dla utworzenia tego skryptu automatyzujacego
+
+3. do zastatowienia czy skrypt ma dziailac jedynie na wybranym systemie czy ma dzialac poprawnie na kilkunastu systemach ( najlepiej wybrac system dla ktorego jest jeszcze wsparcie czyli odpalby Centos a moglbbym wykorzystac Oracle Linux)
+
+4. przy przygotowaniu db i Jiry napisac oddzielne docker composy i skrypt do restartu jak i polozenia i podniesienia aplikacji 	 
+
+
+5. przygotowanie systemu : 
+	ew. instalacja gita
+	aktualizacja systemu
+	instalacja dockera
+	wystartowanie servisu dockera i ustawienie automatycznego startu wraz z startem systemu
+	
+
+6. przygotowanie bazy:
+	pobranie konkretnej wersji obrazu
+	utworzenie pliku docker compose 
+	utworzenie pliku podnoszacego, wylaczajacego i z restartem aplikacji
+	utworzenie pozniej mozliwosci zmiany hasla do uzytkownika glownego
+	oddzielenie miejsce na ktorym znajdza sie dane 
+	ew. utworzenie systemu backupowego
+
+7. przygotowanie Jiry:
+	ogarniecie licencji?
+	pobranie konkretnej wersji
+	utworzenie pliku docker compose
+	utworzenie pliku podnoszacego, wylaczajacego i z restartem aplikacji
+	modyfikacja plikow konfiguracyjnych w jirze
+	oddzielenie miejsca w ktorym znajduja sie dane
+
+8. czy nie zrezygnowac z Jiry na rzecz innego oprogramownia (opensource) 	
+
+9. opisanie instalacji git na docelowym serwerze ? 
+
+
+
+
+

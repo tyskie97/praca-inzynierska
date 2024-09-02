@@ -2,4 +2,5 @@
 	wartosc "x" daje mozliwosc executable
 	wartosc "a" pozwala korzystac przez kazdego uzytkownika i nie trzeba dawac zaraz sudo
 
-2. 
+2. do opisania jaki obraz systemu byl wykorzystywany podczas tworzenia skryptow.
+	"CentOS Stream release 9" 

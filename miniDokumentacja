@@ -8,3 +8,11 @@
 3. podczas instalacji pakietow mozna dodac dwie rzeczy:
 	flaga "-y" automatycznie daje zgode na instalacje i nie musimy nic wiecej oduzytkownika
 	dodajac po calym yum install " > /dev/null 2>&1 &" powoduje calkowite puszczenie instalacji po cichu i w tle, brak jakiejkolwiek informacji po zakonczonej blednie lub poprawnie instalacji
+
+4. jak pushowac kod :
+	najpierw do naszego brancha dodajemy pliki ktore maja zostac potem spushowane
+		git add . <LUB KONKRETNY PLIK>
+	potem tworzymy commita 
+		git commit -m "NAZWA COMMITA"
+	potem pushujemy commit w eter
+		git push origin master <MASTER TO POPROSTU NAZWA NASZEGO BRANCHA>

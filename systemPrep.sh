@@ -22,3 +22,5 @@ systemctl enable docker.service
 echo ">>>>>>>>>>============
 AFTER WLACZENIE I ENABLE DOCKER SERVICE
 >>>>>>>>>>>>============"
+
+./setUpDataBase.sh

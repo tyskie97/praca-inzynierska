@@ -16,3 +16,5 @@
 		git commit -m "NAZWA COMMITA"
 	potem pushujemy commit w eter
 		git push origin master <MASTER TO POPROSTU NAZWA NASZEGO BRANCHA>
+
+5. backupy bazy fizyczne i mozna opisac czemu wybralem wlasnie te

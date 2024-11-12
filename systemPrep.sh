@@ -1,7 +1,7 @@
 #! /bin/bash
 
 printf "\nWitaj w skrypcie automatyzujacym przygotowanie systemu i deploy Jiry oraz bazy danych. Skrypt najlepiej wykonac z konta root lub z konta z rownie wysokimi uprawnieniami."
-printf "\nInstaluje yum-utils."
+printf "\nInstaluje yum-utils.\n"
 show_loading() { 				# petla ktorej zadaniem jest uswiadomienie uzytkownika o wciaz dzialajacym procesie
         while true;
         do
@@ -22,13 +22,13 @@ kill "$show_loading_PID" 2>/dev/null
 printf "\nDodaje repozytorium."
 yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo
 
-printf "\nInstaluje wszystkie paczki wymagane do zainstalowania Dockera."
+printf "\nInstaluje wszystkie paczki wymagane do zainstalowania Dockera.\n"
 show_loading &
 show_loading_PID=$!
 yum install -y docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin >/dev/null 2>&1
 kill "$show_lading_PID" 2>/dev/null
 
-printf "\nAktualizacja wszystkich paczek w systemie."
+printf "\nAktualizacja wszystkich paczek w systemie.\n"
 show_loading &
 show_loading_PID=$!
 yum -y update >/dev/null 2>&1

@@ -15,8 +15,8 @@ systemctl enable docker.service
 echo "Tworze foldery w ktorych beda przechowywane pliki aplikacji dla Jiry oraz dla PostgreSQL
 Jira przechowywana jest w /srv/docker/jira
 PostgreSQL przechowywany jest w /srv/docker/psql"
-mkdir /srv/docker/psql/data
-mkdir /srv/docker/jira/data 
+mkdir -p /srv/docker/psql/data
+mkdir -p /srv/docker/jira/data 
 echo "Przygotowania systemu zakonczone, wykonuje skrypt przygotowania bazy danych."
 
 ./setUpDataBase.sh

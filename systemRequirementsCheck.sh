@@ -3,18 +3,19 @@
 continue_instalation()
 {
 sleep 1
+exit_flag=0
 read -p "Czy kontynuowac instalacje pomimo za niewystarczajacych zasobow? [y/n]:" answer
 case "${answer,,}" in
 	y)
 		sleep 0.5
 		echo "Kontynuuje instalacje."
-		break
+		exit_flag=1
 		;;
 
 	n)
 		sleep 0.5
 		echo "Przerywam instalacje."
-		exit
+		exit_flag=1
 		;;
 
 	*)
@@ -35,7 +36,8 @@ then
 	echo "Wystarczajaca ilosc pamieci RAM: ${total_ram_mb} MB"
 else
 	echo "Nie wystarczajaca ilosc pamieci RAM - ${total_ram_mb} MB dostepne, wymagane ${required_ram_mb} MB."
-	while true;
+	exit_flag=0
+	while [ "$exit_flag" = 0 ];
 	do
 		continue_instalation
 	done
@@ -51,7 +53,7 @@ then
 	echo "Wystarczajaca ilosc rdzeni procesora: ${cpu_cores}"
 else
 	echo "Nie wystarczajaca ilosc rdzeni - ${cpu_cores} rdzenie dostepne, wymagane ${required_cpu_cores} rdzenie."
-	while true;
+	while [ "$exit_flag" = 0 ];
 	do
 		continue_instalation
 	done
@@ -67,7 +69,7 @@ then
 	echo "Wystarczajaca przestrzen na dysku: ${available_space_mb}MB"
 else
 	echo "Nie wystarczajaca przestrzen na dyksu - ${available_space_mb}MB, wymagane ${required_space_mb}MB."
-	while true;
+	while [ "$exit_flag" = 0 ];
 	do
 		continue_instalation
 	done

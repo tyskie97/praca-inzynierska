@@ -1,6 +1,12 @@
 #! /bin/bash
 
-printf "\nWitaj w skrypcie automatyzujacym przygotowanie systemu i deploy Jiry oraz bazy danych. Skrypt najlepiej wykonac z konta root lub z konta z rownie wysokimi uprawnieniami."
+printf "\nWitaj w skrypcie automatyzujacym przygotowanie systemu i deploy Jiry oraz bazy danych Postgres. Skrypt najlepiej wykonac z konta root lub z konta z rownie wysokimi uprawnieniami."
+sleep 1
+
+printf "\nMinimalne zasoby dla Jiry oraz bazy Postgres to 3 CPU, 10GB pamieci RAM oraz 20GB przestrzeni dyskowej."
+printf "\nSprawdzam dostepne zasoby sytemowe"
+./systemRequirementsCheck.sh
+
 printf "\nInstaluje yum-utils.\n"
 show_loading() { 				# petla ktorej zadaniem jest uswiadomienie uzytkownika o wciaz dzialajacym procesie
         while true;

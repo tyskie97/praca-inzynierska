@@ -16,6 +16,7 @@ case "${answer,,}" in
 		sleep 0.5
 		echo "Przerywam instalacje."
 		exit_flag=1
+		exit
 		;;
 
 	*)

@@ -32,7 +32,7 @@ printf "\nInstaluje wszystkie paczki wymagane do zainstalowania Dockera.\n"
 show_loading &
 show_loading_PID=$!
 yum install -y docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin >/dev/null 2>&1
-kill "$show_lading_PID" 2>/dev/null
+kill "$show_loading_PID" 2>/dev/null
 
 printf "\nAktualizacja wszystkich paczek w systemie.\n"
 show_loading &

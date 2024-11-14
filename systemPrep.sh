@@ -32,7 +32,7 @@ yum install -y yum-utils  >/dev/null 2>&1 	# instalacja po cichu
 kill "$show_loading_PID" 2>/dev/null
 
 printf "\nDodaje repozytorium."
-yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo
+yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo >/dev/null 2>&1
 
 printf "\nInstaluje wszystkie paczki wymagane do zainstalowania Dockera.\n"
 show_loading &
@@ -47,8 +47,8 @@ yum -y update >/dev/null 2>&1
 kill "$show_loading_PID" 2>/dev/null
 
 printf "\nWlaczam service Docker-a oraz ustawiam automatyczne wlaczenie wraz z wystartowaniem systemu."
-systemctl start docker.service
-systemctl enable docker.service
+systemctl start docker.service >/dev/null 2>&1
+systemctl enable docker.service >/dev/null 2>&1
 
 printf "\nTworze foldery w ktorych beda przechowywane pliki aplikacji dla Jiry oraz dla PostgreSQL
 Jira przechowywana jest w /srv/docker/jira

@@ -1,6 +1,6 @@
 #! /bin/bash
 
-seconds=57
+seconds=0
 minutes=0
 hours=0 			#god pls stay at 0
 
@@ -28,7 +28,7 @@ do
 		fi
 		seconds=$((seconds + 1))
 		sleep 1
-		printf "\r     \r"
+		printf "\r      \r"
 	done
 	minutes=$((minutes + 1))
 	seconds=0

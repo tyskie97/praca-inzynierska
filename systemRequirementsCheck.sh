@@ -16,7 +16,7 @@ case "${answer,,}" in
 		sleep 0.5
 		echo "Przerywam instalacje."
 		exit_flag=1
-		exit
+		exit 1					# wyjscie ze skryptu z innym kodem aby zakonczyc tez skrypt systemPrep.sh
 		;;
 
 	*)

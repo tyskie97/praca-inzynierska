@@ -4,8 +4,14 @@ printf "\nWitaj w skrypcie automatyzujacym przygotowanie systemu i deploy Jiry o
 sleep 1
 
 printf "\nMinimalne zasoby dla Jiry oraz bazy Postgres to 3 CPU, 10GB pamieci RAM oraz 20GB przestrzeni dyskowej."
+sleep 1
 printf "\nSprawdzam dostepne zasoby sytemowe"
+
 ./systemRequirementsCheck.sh
+if [[ $? -ne 0 ]];				# sprawdzamy czy script zakonczyl sie wczesniej przez uzytkownika
+then
+	exit 1
+fi
 
 printf "\nInstaluje yum-utils.\n"
 show_loading() { 				# petla ktorej zadaniem jest uswiadomienie uzytkownika o wciaz dzialajacym procesie
